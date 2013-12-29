@@ -1,0 +1,2 @@
+require 'kata/algorithms'
+

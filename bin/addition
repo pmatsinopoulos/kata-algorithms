@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+
+require "kata/algorithms"
+
+print "Give me the first number: "
+a = gets.strip
+
+print "Give me the second number: "
+b = gets.strip
+
+result = Kata::Algorithms.addition(a, b)
+
+puts "Result is #{result}"
+
+
