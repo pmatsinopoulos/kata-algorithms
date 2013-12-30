@@ -97,5 +97,131 @@ describe Kata::Algorithms do
       it { expect(subject.multiplication(a, b)).to eq((a.to_i * b.to_i).to_s) }
     end
   end
+  describe '.gcd_recursive_modulo' do
+    context 'when a is 48 and b is 18' do
+      let(:a) { 48 }
+      let(:b) { 18 }
+      it { expect(subject.gcd_recursive_modulo(a, b)).to eq(6) }
+    end
+    context 'when a is 100 and b is 50' do
+      let(:a) { 100 }
+      let(:b) { 50  }
+      it { expect(subject.gcd_recursive_modulo(a, b)).to eq(50) }
+    end
+    context 'when a is 10000 and b is 1' do
+      let(:a) { 1000 }
+      let(:b) { 1    }
+      it { expect(subject.gcd_recursive_modulo(a, b)).to eq(1) }
+    end
+    context 'when a is 8 and b is 12' do
+      let(:a) { 8  }
+      let(:b) { 12 }
+      it { expect(subject.gcd_recursive_modulo(a, b)).to eq(4) }
+    end
+    context 'when a is 54 and b is 24' do
+      let(:a) { 54 }
+      let(:b) { 24 }
+      it { expect(subject.gcd_recursive_modulo(a, b)).to eq(6) }
+    end
+    context 'when a is 18 and b is 84' do
+      let(:a) { 18 }
+      let(:b) { 84 }
+      it { expect(subject.gcd_recursive_modulo(a, b)).to eq(6) }
+    end
+    context 'when a is 48 and b is 180' do
+      let(:a) { 48  }
+      let(:b) { 180 }
+      it { expect(subject.gcd_recursive_modulo(a, b)).to eq(12) }
+    end
+    context 'when a is 1 and b is 1' do
+      let(:a) { 1 }
+      let(:b) { 1 }
+      it { expect(subject.gcd_recursive_modulo(a, b)).to eq(1) }
+    end
+  end
+  describe '.gcd_recursive_subtraction' do
+    context 'when a is 48 and b is 18' do
+      let(:a) { 48 }
+      let(:b) { 18 }
+      it { expect(subject.gcd_recursive_subtraction(a, b)).to eq(6) }
+    end
+    context 'when a is 100 and b is 50' do
+      let(:a) { 100 }
+      let(:b) { 50  }
+      it { expect(subject.gcd_recursive_subtraction(a, b)).to eq(50) }
+    end
+    context 'when a is 10000 and b is 1' do
+      let(:a) { 1000 }
+      let(:b) { 1    }
+      it { expect(subject.gcd_recursive_subtraction(a, b)).to eq(1) }
+    end
+    context 'when a is 8 and b is 12' do
+      let(:a) { 8  }
+      let(:b) { 12 }
+      it { expect(subject.gcd_recursive_subtraction(a, b)).to eq(4) }
+    end
+    context 'when a is 54 and b is 24' do
+      let(:a) { 54 }
+      let(:b) { 24 }
+      it { expect(subject.gcd_recursive_subtraction(a, b)).to eq(6) }
+    end
+    context 'when a is 18 and b is 84' do
+      let(:a) { 18 }
+      let(:b) { 84 }
+      it { expect(subject.gcd_recursive_subtraction(a, b)).to eq(6) }
+    end
+    context 'when a is 48 and b is 180' do
+      let(:a) { 48  }
+      let(:b) { 180 }
+      it { expect(subject.gcd_recursive_subtraction(a, b)).to eq(12) }
+    end
+    context 'when a is 1 and b is 1' do
+      let(:a) { 1 }
+      let(:b) { 1 }
+      it { expect(subject.gcd_recursive_subtraction(a, b)).to eq(1) }
+    end
+  end
+  describe '.gcd_modulo' do
+    context 'when a is 48 and b is 18' do
+      let(:a) { 48 }
+      let(:b) { 18 }
+      it { expect(subject.gcd_modulo(a, b)).to eq(6) }
+    end
+    context 'when a is 100 and b is 50' do
+      let(:a) { 100 }
+      let(:b) { 50  }
+      it { expect(subject.gcd_modulo(a, b)).to eq(50) }
+    end
+    context 'when a is 10000 and b is 1' do
+      let(:a) { 1000 }
+      let(:b) { 1    }
+      it { expect(subject.gcd_modulo(a, b)).to eq(1) }
+    end
+    context 'when a is 8 and b is 12' do
+      let(:a) { 8  }
+      let(:b) { 12 }
+      it { expect(subject.gcd_modulo(a, b)).to eq(4) }
+    end
+    context 'when a is 54 and b is 24' do
+      let(:a) { 54 }
+      let(:b) { 24 }
+      it { expect(subject.gcd_modulo(a, b)).to eq(6) }
+    end
+    context 'when a is 18 and b is 84' do
+      let(:a) { 18 }
+      let(:b) { 84 }
+      it { expect(subject.gcd_modulo(a, b)).to eq(6) }
+    end
+    context 'when a is 48 and b is 180' do
+      let(:a) { 48  }
+      let(:b) { 180 }
+      it { expect(subject.gcd_modulo(a, b)).to eq(12) }
+    end
+    context 'when a is 1 and b is 1' do
+      let(:a) { 1 }
+      let(:b) { 1 }
+      it { expect(subject.gcd_modulo(a, b)).to eq(1) }
+    end
+  end
 end
 

@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+
+require "kata/algorithms"
+
+print "Give me the first number: "
+a = gets.strip.to_i
+
+print "Give me the second number: "
+b = gets.strip.to_i
+
+result = Kata::Algorithms.gcd_recursive_modulo(a, b)
+
+puts "Result is #{result}"
+
+

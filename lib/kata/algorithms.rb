@@ -130,5 +130,84 @@ module Kata
       end
       result
     end
+
+    # GREATEST COMMON DIVISOR (recursive implementation with modulo)
+    # ======================= --------------------------------------
+    #
+    # We are using the Euclidean algorithm to calculate the GCD or Greatest Common Divisor.
+    # This is also called GCF (Greatest Common Factor) or HCF (Highest Common Factor).
+    #
+    # The algorithm goes as follows:
+    #
+    #    gcd(a, 0) is a
+    #    gcd(a, b) is equal to gcd(b, a mod b) - consider a >= b
+    #
+    # We are going to use a recursive call to implement it.
+    #
+    def self.gcd_recursive_modulo(a, b)
+      return b if a == 0
+      return a if b == 0
+      if a >= b
+        gcd_recursive_modulo(b, a % b)
+      else
+        gcd_recursive_modulo(a, b % a)
+      end
+    end
+
+    # GREATEST COMMON DIVISOR (recursive implementation with subtraction)
+    # ======================= -------------------------------------------
+    #
+    # We are using the Euclidean algorithm to calculate the GCD or Greatest Common Divisor.
+    # This is also called GCF (Greatest Common Factor) or HCF (Highest Common Factor).
+    #
+    # The algorithm goes as follows:
+    #
+    #    gcd(a, 0) is a
+    #    gcd(a, b) is equal to gcd(a - b, b) - consider a >= b
+    #
+    # We are going to use a recursive call to implement it.
+    #
+    def self.gcd_recursive_subtraction(a, b)
+      return b if a == 0
+      return a if b == 0
+      if a >= b
+        gcd_recursive_subtraction(a - b, b)
+      else
+        gcd_recursive_subtraction(b - a, a)
+      end
+    end
+
+    # GREATEST COMMON DIVISOR (implementation with modulo)
+    # ======================= ----------------------------
+    #
+    # We are using the Euclidean algorithm to calculate the GCD or Greatest Common Divisor.
+    # This is also called GCF (Greatest Common Factor) or HCF (Highest Common Factor).
+    #
+    # The algorithm goes as follows:
+    #
+    #   a |- b => quotient and remainder
+    #     if remainder == 0 then b is the GCD
+    #     else a = b, b = r
+    #     and repeat
+    #
+    def self.gcd_modulo(a, b)
+      return b if a == 0
+      return a if b == 0
+
+      if b > a
+        temp = b
+        b    = a
+        a    = temp
+      end
+      # now a >= b
+
+      r = a % b
+      while r > 0
+        a = b
+        b = r
+        r = a % b
+      end
+      b
+    end
   end
 end
