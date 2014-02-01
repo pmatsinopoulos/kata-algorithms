@@ -1,4 +1,5 @@
 require "kata/algorithms/version"
+require "kata/algorithms/all"
 
 module Kata
   module Algorithms
