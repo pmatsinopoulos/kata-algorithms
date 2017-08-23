@@ -4,6 +4,13 @@ describe Kata::Algorithms::Searching::LinearSearchOnOrderedArray do
   [
       [[1, 2, 3], 2, 1],
       [[1, 2, 3], 5, nil],
+      [[1, 2, 3], 1, 0],
+      [[1, 2, 3], 3, 2],
+      [[1, 2, 3], -1, nil],
+      [[1, 20, 30], 10, nil],
+      [[1, 20, 30], 25, nil],
+      [[1, 20, 30], 30, 2],
+      [[1, 20, 30], 1, 0],
       [[1, 2, 3], nil, nil],
       [[], 5, nil],
       [nil, 5, nil],
