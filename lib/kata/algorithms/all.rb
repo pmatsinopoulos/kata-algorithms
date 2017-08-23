@@ -1,5 +1,6 @@
 require 'sorting/insertion_sort'
 require 'sorting/bubble_sort'
+require 'sorting/selection_sort'
 require 'sum_of_three/sum_of_three'
 require 'sum_of_three/sum_of_three_hash'
 require 'sum_of_three/sum_of_three_sort'
