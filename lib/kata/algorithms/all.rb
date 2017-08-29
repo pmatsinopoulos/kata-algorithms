@@ -12,3 +12,6 @@ require 'searching/binary_search'
 require 'comparisons/has_duplicate_value'
 require 'factorials/factorial_no_recursion'
 require 'array_intersection'
+
+require 'data_structures/nodes/linked_lists/node'
+require 'data_structures/nodes/linked_lists/linked_list'
