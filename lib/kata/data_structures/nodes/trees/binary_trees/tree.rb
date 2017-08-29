@@ -43,6 +43,35 @@ module Kata
 
               Kata::DataStructures::Nodes::Trees::BinaryTrees::Tree.new(root_node.left).search_recursive(value)
             end
+
+            def insert(value)
+              if root_node.value < value
+                if root_node.right.nil?
+                  root_node.right = Kata::DataStructures::Nodes::Trees::BinaryTrees::Node.new(value)
+                else
+                  # we need to try to insert to the right part
+                  Kata::DataStructures::Nodes::Trees::BinaryTrees::Tree.new(root_node.right).insert(value)
+                end
+              elsif root_node.value >= value
+                if root_node.left.nil?
+                  root_node.left = Kata::DataStructures::Nodes::Trees::BinaryTrees::Node.new(value)
+                else
+                  # we need to try to insert to the left part
+                  Kata::DataStructures::Nodes::Trees::BinaryTrees::Tree.new(root_node.left).insert(value)
+                end
+              end
+            end
+
+            def to_s
+              result = "#{root_node.value},"
+              if root_node.left
+                result = "#{result}#{self.class.new(root_node.left).to_s}"
+              end
+              if root_node.right
+                result = "#{result}#{self.class.new(root_node.right).to_s}"
+              end
+              result
+            end
           end
         end
       end

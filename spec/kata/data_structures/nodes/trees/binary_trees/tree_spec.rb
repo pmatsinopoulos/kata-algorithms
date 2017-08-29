@@ -132,4 +132,24 @@ describe Kata::DataStructures::Nodes::Trees::BinaryTrees::Tree do
       end
     end
   end
+
+  describe '#insert' do
+    context 'when value to add is 2' do
+      let(:value) { 2 }
+      it 'inserts it in the correct node' do
+        binary_tree.insert(value)
+
+        expect(binary_tree.to_s).to eq("5,4,3,2,4.5,6,5.5,7,")
+      end
+    end
+
+    context 'when value to add is 4.4' do
+      let(:value) { 4.4 }
+      it 'inserts it in the correct node' do
+        binary_tree.insert(value)
+
+        expect(binary_tree.to_s).to eq("5,4,3,4.5,4.4,6,5.5,7,")
+      end
+    end
+  end
 end
