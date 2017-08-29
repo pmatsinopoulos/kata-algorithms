@@ -9,6 +9,8 @@ describe Kata::Algorithms::Sorting::PartitionArray do
       [[1, 2, 3], [1, 2, 3], 2],
       [[1, 2], [1, 2], 1],
       [[2, 1], [1, 2], 0],
+      [[0, 50, 20, 10, 60, 30], [0, 10, 20, 30, 60, 50], 3],
+      [[60, 50], [50, 60], 0]
   ].each do |input, output, pivot_position|
     it "when #{input}, then we expect #{output} and pivote position: #{pivot_position}" do
       subject = described_class.new input
