@@ -23,3 +23,4 @@ require 'data_structures/nodes/graphs/shortest_path'
 
 require 'algorithms/find_gaps'
 require 'algorithms/odd_occurrences'
+require 'algorithms/array_rotation'
