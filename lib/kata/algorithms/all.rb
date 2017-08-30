@@ -21,4 +21,5 @@ require 'data_structures/nodes/graphs/person'
 require 'data_structures/nodes/graphs/city'
 require 'data_structures/nodes/graphs/shortest_path'
 
-require 'algorithms/find_gaps.rb'
+require 'algorithms/find_gaps'
+require 'algorithms/odd_occurrences'
