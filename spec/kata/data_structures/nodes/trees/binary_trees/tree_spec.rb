@@ -152,4 +152,10 @@ describe Kata::DataStructures::Nodes::Trees::BinaryTrees::Tree do
       end
     end
   end
+
+  describe '#traverse' do
+    it 'traverses in correct order' do
+      expect(binary_tree.traverse).to eq("3-4-4.5-5-5.5-6-7")
+    end
+  end
 end

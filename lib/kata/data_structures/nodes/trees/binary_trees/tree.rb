@@ -72,6 +72,19 @@ module Kata
               end
               result
             end
+
+            def traverse
+              result = ""
+              unless root_node.left.nil?
+                result = self.class.new(root_node.left).traverse
+              end
+              result = "#{result}-" unless result.empty?
+              result = "#{result}#{root_node.value}"
+              unless root_node.right.nil?
+                result = "#{result}-#{self.class.new(root_node.right).traverse}"
+              end
+              result
+            end
           end
         end
       end
