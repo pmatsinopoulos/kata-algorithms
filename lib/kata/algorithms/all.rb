@@ -18,5 +18,7 @@ require 'data_structures/nodes/linked_lists/linked_list'
 require 'data_structures/nodes/trees/binary_trees/node'
 require 'data_structures/nodes/trees/binary_trees/tree'
 require 'data_structures/nodes/graphs/person'
+require 'data_structures/nodes/graphs/city'
+require 'data_structures/nodes/graphs/shortest_path'
 
 require 'algorithms/find_gaps.rb'
