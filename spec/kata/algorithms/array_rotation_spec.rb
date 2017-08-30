@@ -12,6 +12,7 @@ describe Kata::Algorithms do
         [[3], 3, [3]],
         [[3], 4, [3]],
         [[3], 5, [3]],
+        [[], 5, []],
     ].each do |array, k, output|
       it "when array #{array} and k #{k} then output is #{output}" do
         expect(described_class.rotate_array(array, k)).to eq(output)

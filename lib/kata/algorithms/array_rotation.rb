@@ -12,6 +12,8 @@ module Kata
       we are: diff = "i + k - N + 1"
       then i needs to move to "diff - 1"
 =end
+      return nil if array.nil?
+      return array if array.empty?
       array_size = array.size
       new_array = []
       k = k % array_size if k > array_size
